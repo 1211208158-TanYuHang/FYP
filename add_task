@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task - Task Manager</title>
+    <style>
+        body { font-family: Arial; background: #f0f2f5; margin: 0; }
+        .nav { background: #2c3e50; color: white; padding: 15px 30px; display: flex; justify-content: space-between; }
+        .nav a { color: white; text-decoration: none; margin-left: 15px; }
+        .container { padding: 30px; }
+        .form-box { background: white; padding: 30px; border-radius: 8px; max-width: 500px; }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Task Manager</h2>
+        <div>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="add_task.php">Add Task</a>
+            <a href="index.php">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-box">
+            <h2>Create New Task</h2>
+            <form action="dashboard.php" method="POST">
+                <label>Task Title:</label>
+                <input type="text" placeholder="e.g. FYP Report" required>
+                
+                <label>Category:</label>
+                <select>
+                    <option>Study</option>
+                    <option>FYP</option>
+                    <option>Personal</option>
+                </select>
+
+                <label>Priority:</label>
+                <select>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+
+                <label>Due Date:</label>
+                <input type="date" required>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
